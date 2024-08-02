@@ -1,0 +1,83 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+	.card {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 0px;
+	}
+
+	.cardWrapper {}
+
+	#cards {
+		position: relative;
+		margin-top: 70px;
+	}
+
+	#gameBoard {
+		height: 200px;
+		margin: auto;
+	}
+	
+	#game {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+
+	}
+	
+	#startButton {
+	width: 100px;
+	}
+	
+	#text {
+	margin: 5px;
+	}
+	
+	#game {
+		margin-bottom: 70px;
+		}
+</style>
+
+<div id="game">
+	<div class="text-center">
+		<div class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" id="disableAnimations">
+			<label class="custom-control-label" for="disableAnimations">Disable Animations</label>
+		</div>
+
+		<div id="text"><br></div>
+
+	</div>
+
+	<div id="gameBoard">
+
+		<p style="text-align:center">
+			<button id="startButton" onclick="startGame()" class="btn btn-primary">Start Game</button>
+		</p>
+
+		<div id="cards">
+
+
+			<div id="0" class="card"></div>
+			<div id="1" class="card"></div>
+			<div id="2" class="card"></div>
+
+		</div>
+
+	</div>
+</div>
+
+
+<script>
+
+	$.getScript(gameDirectory + "/files/jquery.path.js", function () {
+		console.log("script loaded");
+	});
+
+	$.getScript(gameDirectory + "/files/script.js", function () {
+		console.log("script loaded");
+	});
+
+</script>
